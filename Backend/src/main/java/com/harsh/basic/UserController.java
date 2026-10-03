@@ -15,7 +15,6 @@ public class UserController {
 
     @PostMapping
     public Name createUser(@RequestBody Name name) {
-        System.out.println("Hi");
         return nameRepository.save(name);
     }
 
