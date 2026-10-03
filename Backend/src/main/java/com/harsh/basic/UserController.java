@@ -18,4 +18,11 @@ public class UserController {
         System.out.println("Hi");
         return nameRepository.save(name);
     }
+
+    @DeleteMapping("/{id}")
+    public void deleteUser(@PathVariable Long id) {
+        System.out.println("Deleting user with id: " + id);
+        nameRepository.deleteById(id);
+    }
+
 }
